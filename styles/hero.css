@@ -5,6 +5,9 @@
   background: #293c35 var(--hero-image) center 48% / cover;
   color: white;
 }
+.brand-name{
+	color:white;
+}
 
 .hero::before {
   position: absolute;
@@ -32,14 +35,15 @@
 }
 
 .hero-title {
-  max-width: 900px;
   font-family: var(--display-font);
   font-size: clamp(2.8rem, 6.5vw, 5.125rem);
   line-height: 1.04;
+  background-color: black;
 }
 
 .hero-title span {
-  color: var(--green);
+  color: #3bd4b8;
+    white-space: nowrap;
 }
 
 .hero-description {
@@ -50,8 +54,8 @@
 
 .btn-primary {
   --bs-btn-color: var(--ink);
-  --bs-btn-bg: var(--green);
-  --bs-btn-border-color: var(--green);
+  --bs-btn-bg: #3bd4b8;
+  --bs-btn-border-color: black;
   --bs-btn-hover-color: var(--ink);
   --bs-btn-hover-bg: #d8ff75;
   --bs-btn-hover-border-color: #d8ff75;
@@ -105,4 +109,8 @@
   .hero-content {
     animation: none;
   }
+}
+#navbar{
+background-color: black;
+text-color: white;
 }
