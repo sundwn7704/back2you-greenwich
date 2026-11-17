@@ -36,9 +36,7 @@
 
 
 <!-- 
-1. Will improve mobile and ipad scaling 
-2. If possible, will try to add image preview after successfully uploading a photo
-
+ If possible, will try to add image preview after successfully uploading a photo
 -->
 
 
@@ -75,74 +73,76 @@
 
       <!-- FORM -->
       <form>
-        <div class="row">
+        <div class="row gx-4">
 
 
           <!-- IMAGE UPLOAD -->
-          <div class="col-12 col-lg-6 container-fluid">
-            <label>
-              <img src="submit_photo.png" alt="Click to upload Image" id="imagesubmit">
-            </label>
+ <div class="col-12 col-md-12 col-xl-5 mx-auto mb-4">
+    <div class="upload-wrapper">
+        <label>
+            <img src="submit_photo.png" alt="Click to upload Image" id="imagesubmit">
+        </label>
+
+        <input type="file" id="filesubmit" name="filesubmit"
+            accept="image/png, image/jpeg, image/webp">
+    </div>
+</div>
+
+          <div class="col-xl-7 col-md-12 col-12">
+            <div id="answerscss" class="d-flex flex-column justify-content-between mt-2 mx-2 mx-lg-0 gap-3">
+              <div>
+                <H5 class="fw-semibold"> Item name</H5>
+                <label>
+                  <input type="text" id="itemname" name="itemname" required>
+                </label>
+              </div>
+
+              <!-- Item category dropdown-->
+
+              <div>
+                <h5 class="fw-semibold"> Category</h5>
+                <label>
+                  <select id="categories" name="categories" class="fw-semibold" required>
+                    <option value="" selected disabled>Select a category</option>
+                    <option value="personal-belongings">Personal Belongings</option>
+                    <option value="electronics-gadgets">Electronics and Gadgets</option>
+                    <option value="clothing-accessories">Clothing and Accessories</option>
+                    <option value="school-office-supplies">School and Office Supplies</option>
+                    <option value="food-containers">Food and Containers</option>
+                    <option value="others">Others</option>
+
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <h5 class="fw-semibold">Address</h5>
+                <label>
+                  <textarea id="address" name="address" required></textarea>
+                </label>
+              </div>
+
+              <div>
+                <H5 class="fw-semibold"> Email </H5>
+                <label>
+                  <input type="email" id="emailadd" name="emailadd" required>
+                </label>
+              </div>
+
+              <div>
+                <br>
+                <label>
+                  <button type="submit" id="submitbutton" class="fw-semibold"> Submit</button>
+                </label>
+              </div>
 
 
-            <input type="file" id="filesubmit" name="filesubmit" accept="image/png, image/jpeg, image/webp">
 
+
+
+            </div>
           </div>
-
-
-          <div id="answerscss" class="col-lg-6 col-12 d-flex flex-column justify-content-between mt-3 container-fluid">
-
-            <div>
-              <H5 class="fw-semibold"> Item name</H5>
-              <label>
-                <input type="text" id="itemname" name="itemname" required>
-              </label>
-            </div>
-
-            <!-- Item category dropdown-->
-
-            <div>
-              <h5 class="fw-semibold"> Category</h5>
-              <label>
-                <select id="categories" name="categories" class="fw-semibold" required>
-                  <option value="" selected disabled>Select a category</option>
-                  <option value="personal-belongings">Personal Belongings</option>
-                  <option value="electronics-gadgets">Electronics and Gadgets</option>
-                  <option value="clothing-accessories">Clothing and Accessories</option>
-                  <option value="school-office-supplies">School and Office Supplies</option>
-                  <option value="food-containers">Food and Containers</option>
-                  <option value="others">Others</option>
-
-                </select>
-              </label>
-            </div>
-
-            <div>
-              <h5 class="fw-semibold">Address</h5>
-              <label>
-                <textarea id="address" name="address" required></textarea>
-              </label>
-            </div>
-
-            <div>
-              <H5 class="fw-semibold"> Email </H5>
-              <label>
-                <input type="email" id="emailadd" name="emailadd" required>
-              </label>
-            </div>
-
-            <div>
-              <br>
-              <label>
-                <button type="submit" id="submitbutton" class="fw-semibold"> Submit</button>
-              </label>
-            </div>
-
-
-
-
-
-          </div>
+        </div>
       </form>
     </section>
   </main>
