@@ -1,71 +1,80 @@
-#imagesubmit {
-   width: 450px;
-   margin-left: 30px;
+.upload-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-#filesubmit {
-     margin-left: 30px;
+#imagesubmit {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
 }
+
 
 #answerscss {
   border: 3px solid black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   background-color: #fffcf6;
-  
-      
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+@media (min-width: 1200px) {
+  #answerscss {
+    min-height: 550px;
+  }
+}
+
+
 #answerscss label {
-  display: block;
-    width: 100%;
+  width: 100%;
 }
 
 #bodybg {
   background-color: #eff0f2
 }
 
-/* CSS for the answers */
-
 #itemname {
-width: 100%;
-border-radius: 15px;
-border-color: lightgray;
-border-style: solid;
-height: 40px;
+  width: 100%;
+  border-radius: 15px;
+  border-color: lightgray;
+  border-style: solid;
+  height: 50px;
 }
 
 #categories {
   width: 100%;
-border-radius: 15px;
-border-color: lightgray;
-height: 40px
+  border-radius: 15px;
+  border-color: lightgray;
+  height: 50px;
 }
 
 
 
 #address {
   width: 100%;
-border-radius: 15px;
-border-color: lightgray;
-height: 40px
+  border-radius: 15px;
+  border-color: lightgray;
+  height: 50px;
 }
 
 #emailadd {
   width: 100%;
-border-radius: 15px;
-border-color: lightgray;
-border-style: solid;
-height: 40px;
+  border-radius: 15px;
+  border-color: lightgray;
+  border-style: solid;
+  height: 50px;
 }
 
 #submitbutton {
-   width: 100%;
-border-radius: 15px;
-height: 40px;
-background-color: #47ac96;
-border-color: lightgray;
-border-style: solid;
+  width: 100%;
+  border-radius: 15px;
+  height: 50px;
+    background-color: #47ac96;
+  border-color: lightgray;
+  border-style: solid;
 }
 
 
