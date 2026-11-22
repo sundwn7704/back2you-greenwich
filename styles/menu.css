@@ -22,10 +22,10 @@ font-weight: bold;
 
 }
 .nav-link:hover {
-  color: forestgreen !important; 
+  color: rgb(102, 145, 209) !important; 
 }
 .nav-link.active:hover {
-  color: forestgreen !important; /* Changes the color when you mouse over it */
+  color: rgb(102, 145, 209) !important; /* Changes the color when you mouse over it */
 }
 .brand-name {
   font-family: var(--display-font);

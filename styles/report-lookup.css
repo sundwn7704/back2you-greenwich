@@ -32,3 +32,7 @@
 .report-lookup-feedback {
   color: rgb(255 255 255 / 82%);
 }
+#navbar{
+background-color: black;
+text-color: white;
+}

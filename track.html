@@ -21,26 +21,25 @@
     <script src="scripts/track.js" defer></script>
   </head>
   <body>
-    <header class="navbar navbar-expand-md sticky-top bg-light px-3 px-lg-5">
+    <header class="navbar navbar-expand-md navbar-dark sticky-top px-3 px-lg-5 bg-black">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center gap-2 mb-0" href="index.html#home" aria-label="Suri home">
-          <span class="brand-mark" aria-hidden="true">s</span>
-          <span class="brand-name fs-4 fw-bold">suri<span class="brand-period">.</span></span>
-        </a>
-
-        <button class="navbar-toggler" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
-        </button>
-
-        <nav class="collapse navbar-collapse justify-content-md-end" id="site-navigation" aria-label="Main navigation">
-          <div class="navbar-nav align-items-md-center gap-md-5">
-            <a class="nav-link" href="index.html#home">Home</a>
-            <a class="nav-link" href="index.html#how-it-works">About</a>
-            <a class="nav-link" href="index.html#volunteer">Volunteer</a>
-            <a class="btn btn-outline-dark ms-md-2" href="report.html">Report</a>
-          </div>
-        </nav>
-      </div>
+                <a class="navbar-brand d-flex align-items-center gap-2 mb-0" href="#home" aria-label="back2you home">
+                    <span class="brand-name fs-4 fw-bold">back2you<span class="brand-period">.</span></span>
+                </a>
+                <!-- Hamburger button -->
+                <button class="navbar-toggler" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+                <!-- Navigation menu -->
+                <nav class="collapse navbar-collapse justify-content-md-end" id="site-navigation" aria-label="Main navigation">
+                    <div class="navbar-nav align-items-md-center gap-md-5">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="report.html" >Report</a>
+		                    <a class="nav-link active" href="track.html" aria-current="page">Items</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </div>
+                </nav>
+            </div>
     </header>
 
     <main>
@@ -48,78 +47,54 @@
         <div class="container">
           <p class="track-eyebrow text-uppercase fw-bold mb-2">Report status</p>
           <h1 class="track-hero-title mb-2" id="track-title">Track a report</h1>
-          <p class="track-hero-copy mb-0">Follow a report from submission through review and verdict.</p>
+          <p class="track-hero-copy mb-0">Browse through our catalogue of lost items</p>
         </div>
       </section>
 
-      <section class="track-main py-5" aria-label="Report tracking details">
-        <div class="container">
-          <form class="track-search mb-4" id="track-search-form">
-            <label class="form-label" for="track-report-number">Report number</label>
-            <div class="input-group">
-              <input class="form-control" id="track-report-number" name="report-number" type="text" placeholder="e.g. SR-20261025-ABCDE" required>
-              <button class="btn btn-dark" type="submit">Find report</button>
-            </div>
-            <p class="form-text mb-0">Try sample cases: SR-20261025-1001 (pending), SR-20261025-1002 (community review), or SR-20261025-1003 (verdict).</p>
-          </form>
+    <section class="items-section">
+    <div class="row justify-content-center text-center">
 
-          <p class="track-notice" id="track-notice" role="status" aria-live="polite" hidden></p>
+    <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost1.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Phone left in Jollibee Vito Cruz</p>
+      </div>
+    </div>
+     <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost2.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Lost wallet found along Ocampo St.</p>
+      </div>
+    </div>
+     <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost3.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Aquaflask left in LRT Vito Cruz</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost1.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Phone left in Jollibee Vito Cruz</p>
+      </div>
+    </div>
+     <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost1.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Phone left in Jollibee Vito Cruz</p>
+      </div>
+    </div>
+     <div class="col-12 col-md-4">
+      <div class="image-box">
+        <img src="lost1.jpg" class="img-fluid rounded mb-2" alt="Description of image">
+        <p>Phone left in Jollibee Vito Cruz</p>
+      </div>
+    </div>
 
-          <article class="track-report" id="track-report" aria-labelledby="track-report-heading" hidden>
-            <header class="track-report-header">
-              <div>
-                <p class="track-category mb-1" id="track-category"></p>
-                <h2 class="track-report-number mb-0" id="track-report-heading"></h2>
-              </div>
-              <span class="track-status" id="track-status"></span>
-            </header>
+     </div>
+    </section>
 
-            <div class="row g-4 py-4">
-              <div class="col-12">
-                <h3 class="track-detail-title">Incident description</h3>
-                <p class="track-detail-value mb-0" id="track-description"></p>
-              </div>
-              <div class="col-md-6">
-                <h3 class="track-detail-title">Sender</h3>
-                <p class="track-detail-value mb-0" id="track-sender"></p>
-              </div>
-              <div class="col-md-6">
-                <h3 class="track-detail-title">Date received</h3>
-                <p class="track-detail-value mb-0" id="track-date-received"></p>
-              </div>
-              <div class="col-md-6">
-                <h3 class="track-detail-title">Location</h3>
-                <p class="track-detail-value mb-0" id="track-location"></p>
-              </div>
-              <div class="col-md-6">
-                <h3 class="track-detail-title">Submitted</h3>
-                <p class="track-detail-value mb-0" id="track-submitted"></p>
-              </div>
-              <div class="col-12" id="track-message-row" hidden>
-                <h3 class="track-detail-title">Submitted message</h3>
-                <p class="track-detail-value track-message mb-0" id="track-message"></p>
-              </div>
-              <div class="col-12" id="track-screenshot-row" hidden>
-                <h3 class="track-detail-title">Screenshot attachment</h3>
-                <p class="track-detail-value mb-0" id="track-screenshot"></p>
-              </div>
-            </div>
-
-            <section class="track-progress" aria-labelledby="track-progress-title">
-              <h3 class="track-progress-title" id="track-progress-title">Progress</h3>
-              <ol class="track-timeline" id="track-timeline"></ol>
-            </section>
-
-            <section class="track-verdict mt-4" id="track-verdict" aria-labelledby="track-verdict-title" hidden>
-              <p class="track-verdict-kicker text-uppercase fw-bold mb-2">Published verdict</p>
-              <h3 class="track-verdict-title mb-2" id="track-verdict-title"></h3>
-              <p class="track-verdict-copy mb-0" id="track-verdict-copy"></p>
-            </section>
-          </article>
-
-          <p class="track-demo-note small mt-4 mb-0">Sample cases load from data/reports.json. Submitted reports are stored only in this browser; reports are not sent to an agency or reviewed by a live AI system.</p>
-        </div>
-      </section>
+      
     </main>
 
     <footer class="site-footer py-4">
