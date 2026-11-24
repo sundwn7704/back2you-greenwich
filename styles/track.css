@@ -2,11 +2,11 @@
 .track-hero {
   min-height: 25svh;
   padding-block: 2rem;
-  background: #eaf1db;
+  background: #000000;
 }
 
 .track-eyebrow {
-  color: #52643a;
+  color: #ffffff;
   font-size: 0.75rem;
 }
 
@@ -14,7 +14,8 @@
 .track-report-number,
 .track-progress-title,
 .track-verdict-title {
-  color: var(--ink);
+  color: #f7f7f7;
+
   font-family: var(--display-font);
 }
 
@@ -25,7 +26,7 @@
 
 .track-hero-copy,
 .track-demo-note {
-  color: #59635e;
+color: #3bd4b8;
 }
 
 .track-search {
@@ -209,8 +210,9 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
+  border: 3px solid #000000;
   overflow: hidden;
-  
+  margin-bottom: 16px;
 }
 
 .image-box img {
@@ -260,4 +262,21 @@
   .track-step-copy {
     margin: 0;
   }
+}
+.report{
+  text-align: left;
+}
+.address{
+font-size: 13px;
+letter-spacing: 1px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 400;
+background-color: #3bd4b8;
+
+
+}
+.title{
+font-size: 16px;
+color: #000000;
 }
