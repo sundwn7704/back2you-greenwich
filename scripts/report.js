@@ -91,15 +91,16 @@ reportForm.addEventListener("submit", (event) => {
     reportNumber,
     status: "pending",
     category: reportForm.elements.category.selectedOptions[0].textContent,
-    description: document.querySelector("#incident-description").value.trim(),
-    suspiciousText: document.querySelector("#suspicious-text").value.trim(),
-    screenshotName: screenshot ? screenshot.name : "",
+    description: document.querySelector("#description").textContent.trim(),
+    reportTitle: document.querySelector(".report.title").textContent.trim(),
+    screenshotName: document.querySelector(".image-box img").getAttribute("src"),
     sender: document.querySelector("#sender").value.trim(),
     receivedDate: receivedDateInput.value,
     email: document.querySelector("#email-address").value.trim(),
-    locationMode: locationMapMode.checked ? "map" : "text",
-    location,
+    location: document.querySelector(".report.address").textContent.trim(),
     submittedAt: new Date().toISOString(),
+    contactNo: document.querySelector("#contactNo").value.trim(),
+
     verdict: ""
   };
 

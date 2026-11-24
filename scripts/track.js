@@ -99,12 +99,13 @@ const displayReport = (report, isExample = false) => {
   setValue("#track-date-received", formatDate(report.receivedDate));
   setValue("#track-location", report.location);
   setValue("#track-submitted", formatDate(report.submittedAt));
+  setValue("#contactNo", report.contactNo);
 
-  const statusLabel = report.status === "verdict"
-    ? "Verdict published"
-    : report.status === "community-review"
-      ? "Community review"
-      : "Pending review";
+  const statusLabel = report.status === "unclaimed"
+    ? "Unclaimed"
+    : report.status === "returned"
+      ? "Returned"
+      : "???";
 
   trackStatus.textContent = statusLabel;
   // `toggle` adds or removes this CSS class depending on whether a verdict is published.
