@@ -29,15 +29,12 @@
   <link rel="stylesheet" href="styles/footer.css">
   <script src="scripts/hero.js" defer></script>
   <script src="scripts/menu.js" defer></script>
-  <script src="scripts/report-lookup.js" defer></script>
-  <script src="scripts/volunteer.js" defer></script>
 
+
+  <!-- MAIN JAVASCRIPT FOR THE REPORT -->
+  <script src="imagepreview.js" defer></script>
 </head>
 
-
-<!-- 
- If possible, will try to add image preview after successfully uploading a photo
--->
 
 
 <body id="bodybg">
@@ -72,21 +69,20 @@
     <section class="container mt-4 mb-4">
 
       <!-- FORM -->
-      <form>
+      <form id="formsubmit">
         <div class="row gx-4">
 
 
           <!-- IMAGE UPLOAD -->
- <div class="col-12 col-md-12 col-xl-5 mx-auto mb-4">
-    <div class="upload-wrapper">
-        <label>
-            <img src="submit_photo.png" alt="Click to upload Image" id="imagesubmit">
-        </label>
+          <div class="col-12 col-md-12 col-xl-5 mx-auto mb-4">
+            <div class="upload-wrapper">
+              <label>
+                <img src="submit_photo.png" alt="Click to upload Image" id="imagesubmit">
 
-        <input type="file" id="filesubmit" name="filesubmit"
-            accept="image/png, image/jpeg, image/webp">
-    </div>
-</div>
+                <input type="file" id="filesubmit" name="filesubmit" accept="image/png, image/jpeg, image/webp">
+              </label>
+            </div>
+          </div>
 
           <div class="col-xl-7 col-md-12 col-12">
             <div id="answerscss" class="d-flex flex-column justify-content-between mt-2 mx-2 mx-lg-0 gap-3">
@@ -129,23 +125,34 @@
                 </label>
               </div>
 
+
               <div>
                 <br>
                 <label>
-                  <button type="submit" id="submitbutton" class="fw-semibold"> Submit</button>
+                  <button type="submit" id="submitbutton" class="fw-semibold">Submit</button>
                 </label>
+
+                <div class="popup" id="popup">
+                  <img src="checkmark_icon.png" alt="A checkmark for successfully submitting the form">
+                  <h2> Thank you for submitting!</h2>
+                  <p> Please proceed to the items catalouge page to see your report. </p>
+                  <button type="button" onclick="closePopup()"> Return to Report page</button>
+                </div>
               </div>
+            
 
 
 
 
-
-            </div>
           </div>
+        </div>
         </div>
       </form>
     </section>
   </main>
+
+
+
 
   <footer class="site-footer py-4">
     <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
@@ -154,5 +161,7 @@
     </div>
   </footer>
 
+
+</body>
 
 </body>
